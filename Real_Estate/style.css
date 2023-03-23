@@ -1,0 +1,181 @@
+body{
+    color: rgb(86, 109, 136);
+    font-family: 'Montserrat';
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 220px;
+    object-fit: contain;
+}
+.left-section, .right-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+}
+.left-section{
+    padding-left: 2rem;
+}
+.right-section{
+    padding-right: 2rem;
+    width: 20%;
+}
+#title{
+    margin: 10px 0 100px;
+}
+#title img{
+    position: relative;
+    width: 100%;
+}
+.caption {
+    position: absolute;
+    top: 8rem;
+    left: 1rem;
+    right: 45%;
+    font-size: 3rem;
+    text-align: left;
+}
+
+.search-input:hover{
+    width: 25%;
+}
+.search-input:focus{
+    outline: none;
+    box-shadow: 0 0 10px rgb(86, 109, 136);
+}
+
+.search-input {
+    width: 10%;
+    position: absolute;
+    right:8%;
+    top: 12rem;
+    height: 3rem;
+    border-radius: 20px;
+    padding-left: 15px;
+    border: none;
+    font-size: 1rem;
+    background-color: rgb(223, 231, 240);
+    font-family: FontAwesome, Montserrat;
+}
+
+#goal{
+    background-color: rgb(223, 231, 240);
+    padding: 10% 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+    margin-bottom: 10rem;
+    position: relative;
+}
+#goal h1{
+    font-size: 2rem;
+}
+#goal p{
+    font-size: 1.2rem;
+}
+.house-images img{
+    width: 100px;
+    
+}
+
+.house-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    text-align: center;
+}
+
+.buy, .sell, .rent{
+    background-color: white;
+    margin: auto 2.5rem;
+    padding: 10% 10% 6%;
+    position: relative;
+    box-shadow: 0 0 10px rgb(86, 109, 136);
+    transition: transform 1s;
+}
+.buy:hover, .sell:hover, .rent:hover{
+    transform: scale(1.2,1.2);
+    background-color: rgb(243, 245, 247);
+}
+.buy .tooltip, .sell .tooltip, .rent .tooltip{
+    position: absolute;
+    background-color: rgb(86, 109, 136);
+    color: white;
+    padding: 4px 8px 4px 8px;
+    border-radius: 2px;
+    font-size: 14px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.buy:hover .tooltip, .sell:hover .tooltip, .rent:hover .tooltip{
+    opacity: 1;
+}
+.house-images p{
+    font-weight: 500;
+    color: black;
+    padding: 0;
+}
+.villa{
+    width: 350px;
+    position: absolute;
+    bottom: -8rem;
+    left: 7rem;
+    animation: house ease-in 5s;
+}
+@keyframes house{
+    from{left: -200px;}
+    to{left: 90px;}
+}
+#recommendations{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+    margin-bottom: 20rem;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    place-items: center;
+}
+.recommended-houses {
+    width: 100%;
+    margin-left: 5rem;
+}
+
+.left{
+    position: relative;
+    animation: mymove linear 5s;
+}
+.right{
+    position: relative;
+    animation: right-images linear 5s;
+}
+@keyframes mymove{
+    from{left: -200px;}
+    to{left: 0px;}
+}
+@keyframes right-images{
+    from{right: -200px;}
+    to{right: 0px;}
+}
+.sign-in{
+    height: 3rem;
+    padding: 5px 40px 5px;
+    font-size: 1.3rem;
+    background-color: rgb(86, 109, 136);
+    color: white;
+    font-weight: 500;
+    border: none;
+}
+
+@media(max-width: 1000px){
+    .caption{
+        position: static;
+        font-size: 2rem;
+    }
+}
